@@ -24,7 +24,7 @@ sub cmd {
   my @arguments = @_;
 
   my $dockerProjectRoot = _retrieve_docker_project_root();
-  my $dockerProjectScript = '.bmeme/bin/app';
+  my $dockerProjectScript = '.bmeme/build/bin/app';
   my $dockerProjectSubPath = substr($cwd, length($dockerProjectRoot));
 
   if ( $dockerProjectRoot ) {
@@ -59,7 +59,7 @@ sub configure {
 # PRIVATE METHODS ##############################################################
 
 sub _retrieve_docker_project_root {
-  my $dockerProjectScript = '.bmeme/bin/c';
+  my $dockerProjectScript = '.bmeme/build/configure';
   my $dockerProjectRoot = $cwd;
   my $dockerProjectRootFound = 0;
 
